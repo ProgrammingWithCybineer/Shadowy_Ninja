@@ -54,7 +54,7 @@ class Ninja(pygame.sprite.Sprite):
         self.update_time = pygame.time.get_ticks()
 
         #load all images for the players
-        animation_types = ["Idle", "Run", "Jump" ]
+        animation_types = ["Idle", "Run", "Jump", ]
         for animation in animation_types:
             #reset temporary list of images
             temp_list = []
@@ -146,7 +146,7 @@ class Ninja(pygame.sprite.Sprite):
 
 #creating player
 player = Ninja("player", 50,768, 200, 5)
-# enemy = Ninja("enemy",200, 200, 200, 5)
+Black_enemy = Ninja("Black_enemy",50,768, 200, 5)
 
 
 
@@ -160,7 +160,8 @@ while run:
     draw_bg()
     player.update_animation()
     player.draw()
-    #enemy.draw()
+    Black_enemy.update_animation()
+    Black_enemy.draw()
 
 
     #update player action
